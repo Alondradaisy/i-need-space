@@ -25,7 +25,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #00b4d8;
+    background-color: f9dcc4;
     padding: 0 24px;
 }
 
@@ -79,3 +79,28 @@ button {
 button:hover {
     box-shadow: 0 0 20px #caf0f8;
 }
+
+#clear {
+    background-color: #03045e;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+}
+
+/* .item-rise-feature {
+
+}
+
+.item-culmination-feature {
+
+}
+
+.item-set-feature {
+
+} */
+
