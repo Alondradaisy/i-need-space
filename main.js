@@ -4,7 +4,7 @@ search.addEventListener('click', function() {
     const address = document.getElementById('address').value;
     const norad = document.getElementById('norad').value;
     const addressInput = encodeURI(address); // encodes the address by user
-    const displayResults = document.querySelector('.display-results');
+    const displayResults = document.querySelector('.displayResults');
     
     const mapboxURL = `https://api.mapbox.com/geocoding/v5/mapbox.places/${addressInput}.json?access_token=${mapbox}`
     fetch(mapboxURL)
@@ -32,15 +32,18 @@ search.addEventListener('click', function() {
 
             const riseFirst = document.createElement('div')
             riseFirst.className = displayResults
-            riseFirst.innerHTML = `<p>Display Rise Date&Time</p>${convert(rise)}`.append(displayResults)
+            riseFirst.innerHTML = `<p>Display Rise Date&Time</p>${convert(rise)}`
+            displayResults.append(riseFirst)
 
             const culminationSecond = document.createElement('div')
             culminationSecond.className = displayResults
-            culminationSecond.innerHTML = `<p>Display Rise Date&Time</p>${convert(culmination)}`.append(displayResults)
+            culminationSecond.innerHTML = `<p>Display Rise Date&Time</p>${convert(culmination)}`
+            displayResults.append(culminationSecond)
 
             const setThird = document.createElement('div')
             setThird.className = displayResults
-            setThird.innerHTML = `<p>Display Rise Date&Time</p>${convert(set)}`.append(displayResults)
+            setThird.innerHTML = `<p>Display Rise Date&Time</p>${convert(set)}`
+            displayResults.append(setThird)
 
         })
         
